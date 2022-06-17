@@ -1,0 +1,40 @@
+.table tr td {
+    padding: 10px;
+}
+
+
+/* POINTER CURSOR */
+
+tr:hover {
+    background-color: #ddd;
+}
+
+tr td {
+    cursor: pointer;
+}
+
+nav {
+    position: relative;
+    display: flex;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 1.2em;
+    color: #0d6efd;
+    cursor: pointer;
+    margin: 0px 20px;
+}
+
+nav #marker {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: #0d6efd;
+    width: 0;
+    height: 3px;
+    transition: 0.5s;
+}
