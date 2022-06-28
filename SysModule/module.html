@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>Module</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="module.css">
+    <script src="module.js">
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <div class="container-fluid">
+        <!-- Content here -->
+        <div class="py-3 border-bottom">
+            <div class="container-fluid d-grid  align-items-center" style="grid-template-columns: 1000px;">
+                <div class="row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label" style="padding-top: 1px; padding-right:0; margin-left: 16.4px;">Sub Module
+                        <span style="float: right;">:</span>
+                    </label>
+                    <div class="col-lg-8 col-sm-5">
+                        <select class="form-select form-select-sm" id="module">
+                            <option selected disabled value="">Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="py-3 mb-3 border-bottom" id="navModule" style="display: none;">
+            <div class="container-fluid">
+                <nav>
+                    <div id="marker"></div>
+                    <a class="nav-link showDataTopTable" style="margin-left: 0;">Data Top</a>
+                    <a class="nav-link showDataButtonTable">Data Button</a>
+                </nav>
+            </div>
+
+        </div>
+
+
+        <div class="container-fluid pb-3">
+            <h2 class="table_top" style="display: none;">Data Top</h2>
+            <h2 class="table_button" style="display: none;">Data Button</h2>
+            <div class="d-grid gap-3 " style="grid-template-columns: 665px 1000px;">
+                <div class="bg-light border rounded-3 table_top" style="display: none;">
+                    <div style="padding:15px;">
+                        <button type="button" class="btn btn-success showAddDataTopProperties" style="float: right;">New</button>
+                        <table class="table" id="dataTop">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="35%">
+                                <col width="45%">
+                                <col width="5%">
+
+                            </colgroup>
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Name</th>
+                                    <th>Information</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>fg</td>
+                                    <td>slecac</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>sg</td>
+                                    <td>bnn</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>cv</td>
+                                    <td>ghh</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>dc</td>
+                                    <td>oppp</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+                <div class="bg-light border rounded-3 table_button" style="display: none;">
+
+                    <div style=" padding: 15px;">
+                        <button type="button" class="btn btn-success showAddDataButtonProperties" style="float: right;">New</button>
+                        <table class="table" id="dataButton">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="80%">
+                                <col width="5%">
+                            </colgroup>
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>fddg</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>swwg</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>crrv</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>dnnc</td>
+                                    <td><button type="button" class="btn-close" aria-label="Close" onclick="deleteRow(this);"></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-light border rounded-3 table_top" style="display: none;">
+                    <h4 class="table_top_pro" style="padding: 15px;  display: none;">Properties</h4>
+                    <hr class="table_top_pro" style="display: none; margin: 0;">
+                    <div class="table_top_pro" style="display: none; padding: 15px;">
+                        <form class="row g-3 needs-validation topform" style="padding-top: 20px;" id="topform" name="topForm" novalidate>
+                            <div class="mb-3 row">
+                                <label for="validationCustom01" class="col-sm-2 col-form-label">Icon <span
+                                        style="float: right;">:</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="iconTop" name="iconTop" required>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter an icon.
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="validationCustom02" class="col-sm-2 col-form-label">Name
+                                    <span style="float: right;">:</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text" id="nameTop" name="nameTop" required>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter name.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Info
+
+                                    <span style="float: right;">:</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control autogrow" id="infoTop" name="infoTop"></textarea>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="validationCustom04" class="col-sm-2 col-form-label ">SQL
+                                    <span style="float: right;">:</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control autogrow" id="sqlTop" name="sqlTop" required></textarea>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter SQL.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="validationCustom04" class="col-sm-2 col-form-label ">POS
+                                    <span style="float: right;">:</span>
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="posTop" name="posTop" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" / required>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter POS.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12" style="text-align: right; padding-right: 35px;">
+                                <button class="btn btn-primary" type="submit" id="topbtn" onclick="saveTop(); updateTop();">Save</button>
+                                <button class="btn btn-primary" type="reset" onclick="resetTop(); ">Reset</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="bg-light border rounded-3 table_button" style="display: none;">
+                    <h4 class=" table_button_pro " style="padding: 15px; display: none; ">Properties</h4>
+                    <hr class="table_button_pro " style="display: none; margin: 0; ">
+                    <div class="table_button_pro buttonForm" id="buttonForm" style="display: none; padding: 15px;">
+
+                        <form class="row g-3 needs-validation buttonform" style="padding-top: 20px; " novalidate>
+
+                            <div class="mb-3 row">
+                                <label for="validationCustom01" class="col-sm-2 col-form-label">Name <span
+                                        style="float: right;">:</span>
+                                </label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nameButton" required>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter an name.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row ">
+                                <label for="validationCustom02 " class="col-sm-2 col-form-label ">SQL
+                                    <span style="float: right; ">:</span>
+                                </label>
+                                <div class="col-sm-10 ">
+                                    <textarea type="text " class="form-control autogrow " id="sqlButton" required></textarea>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback ">
+                                        Please enter SQL.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="validationCustom01" class="col-sm-2 col-form-label">POS <span
+                                        style="float: right;">:</span>
+                                </label>
+
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="posButton" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" / value="" required>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter POS.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 " style="text-align: right; padding-right: 35px; ">
+                                <button class="btn btn-primary " type="submit" id="buttonbtn" onclick="saveButton(); updateButton();">Save</button>
+                                <button class="btn btn-primary" type="reset" onclick="resetButton()">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pb-3 table_button_set" style="display: none; padding: 10px; ">
+            <hr>
+            <h2>Data Set</h2>
+            <div class="d-grid gap-3 " style="grid-template-columns: 665px 1000px; ">
+                <div class="bg-light border rounded-3 ">
+                    <div style="padding:15px; ">
+                        <button type="button" class="btn btn-success showAddDataSetProperties" onclick="myFunction()" style="float: right;">New</button>
+                        <script>
+                            function myFunction() {
+                                $("#setbtn").html("Save");
+                                $('#linePro').hide('fast');
+                                $('#barPro').hide('fast');
+                                $('#piePro').hide('fast');
+                            }
+                        </script>
+                        <table class="table" id="dataSet">
+                            <colgroup>
+                                <col width="15% ">
+                                <col width="35% ">
+                                <col width="45% ">
+                                <col width="5% ">
+
+                            </colgroup>
+                            <thead class="table-light ">
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>fg</td>
+                                    <td>Pie</td>
+                                    <td><button type="button " class="btn-close " aria-label="Close " onclick="deleteRow(this); "></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>sg</td>
+                                    <td>Bar</td>
+                                    <td><button type="button " class="btn-close " aria-label="Close " onclick="deleteRow(this); "></button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>cv</td>
+                                    <td>Line</td>
+                                    <td><button type="button " class="btn-close " aria-label="Close " onclick="deleteRow(this); "></button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>dc</td>
+                                    <td>Pyramid</td>
+                                    <td><button type="button " class="btn-close " aria-label="Close " onclick="deleteRow(this); "></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-light border rounded-3 ">
+                    <h4 class=" table_button_set_pro " style="padding: 15px; display: none; ">Properties</h4>
+                    <hr class="table_button_set_pro " style="display: none; margin: 0; ">
+                    <div class="table_button_set_pro " style="display: none; padding: 15px;">
+
+                        <form class="row g-3 needs-validation setform" style="padding-top: 20px; " novalidate>
+                            <div class="mb-3 row">
+                                <label for="validationCustom01" class="col-sm-3 col-form-label">Name <span
+                                        style="float: right;">:</span>
+                                </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="nameSet" value="" required>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter name.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row ">
+                                <label for="validationCustom02 " class="col-sm-3 col-form-label ">Type
+                                    <span style="float: right; ">:</span>
+                                </label>
+                                <div class="col-sm-3 ">
+                                    <select class="form-select test" id="typeSet" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option value="Line" class="type">Line</option>
+                                        <option value="Bar" class="type">Bar</option>
+                                        <option value="Pie" class="type">Pie</option>
+                                        <option value="Area" class="type">Area</option>
+                                        <option value="Pyramid" class="type">Pyramid</option>
+                                    </select>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a type.
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="mb-3 row" id="linePro" style="display: none;">
+                                <label for="validationCustom02 " class="col-sm-3 col-form-label ">Properties for line
+                                    <span style="float: right; ">:</span>
+                                </label>
+                                <div class="col-sm-3 ">
+                                    <select class="form-select" id="lineTypeSet" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Spline">Spline</option>
+                                    </select>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a property.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row" id="piePro" style="display: none;">
+                                <label for="validationCustom02 " class="col-sm-3 col-form-label ">Properties for pie
+                                    <span style="float: right; ">:</span>
+                                </label>
+                                <div class="col-sm-3 ">
+                                    <select class="form-select" id="pieTypeSet" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Doughnut">Doughnut</option>
+                                    </select>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a property.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row" id="barPro" style="display: none;">
+                                <label for="validationCustom02 " class="col-sm-3 col-form-label ">Properties for bar
+                                    <span style="float: right; ">:</span>
+                                </label>
+                                <div class="col-sm-3 ">
+                                    <select class="form-select" id="barTypeSet" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option value="Vertical">Vertical</option>
+                                        <option value="Horizontal">Horizontal</option>
+                                    </select>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a property.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row ">
+                                <label for="validationCustom03 " class="col-sm-3 col-form-label ">SQL
+                                    <span style="float: right; ">:</span>
+                                </label>
+                                <div class="col-sm-9 ">
+                                    <textarea type="text " class="form-control autogrow " id="sqlSet" value="" required></textarea>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback ">
+                                        Please enter SQL.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 row ">
+                                <label for="validationCustom01 " class="col-sm-3 col-form-label ">POS <span
+                                        style="float: right; ">:</span>
+                                </label>
+
+                                <div class="col-sm-3 ">
+                                    <input type="text " class="form-control" id="posSet" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " / required>
+                                    <div class="valid-feedback ">
+                                    </div>
+                                    <div class="invalid-feedback ">
+                                        Please enter POS.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 " style="text-align: right; padding-right: 35px; ">
+                                <button class="btn btn-primary " type="submit" id="setbtn" onclick="saveSet(); updateSet();">Save</button>
+                                <button class="btn btn-primary " type="reset" onclick="resetSet()">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+
+</html>
